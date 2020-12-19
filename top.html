@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>coffee</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/sublimeSlideshow.css"
+      media="all"
+    />
+    <link rel="stylesheet" type="text/css" href="css/index.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.8.0.min.js.js"></script>
+    <script type="text/javascript" src="js/jquery.sublimeSlideshow.js"></script>
+
+    <script type="text/javascript">
+      $(function () {
+        $.sublime_slideshow({
+          src: [
+            {
+              url: "images/img5.jpg",
+              title: "",
+            },
+            {
+              url: "images/img4.jpg",
+            },
+            {
+              url: "images/img7.jpg",
+            },
+          ],
+          duration: 9,
+          fade: 1.5,
+          scaling: 1.08,
+          rotating: false,
+        });
+      });
+      //   $(function () {
+      //     $.sublime_slideshow({
+      //       src: [
+      //         { url: "img4.jpg", title: "月夜" },
+      //         { url: "img5.jpg", title: "嘎嘎" },
+      //         { url: "img7.jpg" },
+      //       ],
+      //       duration: 10,
+      //       fade: 0.5,
+      //       scaling: 1.12,
+      //       rotating: 1,
+      //       overlay: "images/pattern.png",
+      //     });
+      //   });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/logo.png" alt="" />
+      </div>
+      <div class="sns">
+        <div class="iconWarp">
+          <a href="">
+            <svg class="icon">
+              <use xlink:href="#icon-facebook2"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="iconWarp">
+          <a href="">
+            <svg class="icon">
+              <use xlink:href="#icon-instagram"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="iconWarp">
+          <a href="">
+            <svg class="icon">
+              <use xlink:href="#icon-twitter2"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header 10px;der>
+
+    <aside id="new">
+      <h1 style="text-decoration: underline; color: #e83f43">
+        <span style="color: #ffffff">News</span>
+      </h1>
+      <p>
+        2020年11月18日<br />
+        新規サイトオープン企画　Webサイトを見て特製ケーキをもらおう！
+      </p>
+      <p>
+        2020年11月10日<br />
+        新作マカロン登場！！
+      </p>
+      <p>
+        2020年11月3日　
+        お待たせ致しました！カフェ・ド・パリWebサイトをオープン致しました。
+      </p>
+    </aside>
+
+    <div class="home_content">
+      <ul>
+        <li class="navi_home">
+          <a href="">Home</a>
+        </li>
+        <li class="navi_menu">
+          <a href="">Menu</a>
+        </li>
+        <li class="navi_shop">
+          <a href="">Shop Information</a>
+        </li>
+      </ul>
+      <p>
+        Saturday,Sunday,holiday AM7:00-PM21:00 / Monday-Friday AM9:00-PM21:00
+        Tel.070-888-8888
+      </p>
+    </div>
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+    integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    const topNew = document.querySelector("#new");
+    const home_content = document.querySelector(".home_content");
+    const logo = document.querySelector(".logo");
+    const sns = document.querySelector(".sns");
+    const tl = new TimelineMax();
+
+    // tl.fromTo(
+    //   home_content,
+    //   1.0,
+    //   { x: "100%" },
+    //   { x: "0%", ease: Power2.easeInOut }
+    // )
+    //   .fromTo(
+    //     topNew,
+    //     1.0,
+    //     { x: "-110%" },
+    //     { x: "0%", ease: Power2.easeInOut },
+    //     "-=1.0"
+    //   )
+
+    tl.fromTo(home_content, 1, { opacity: 0, x: 200 }, { opacity: 1, x: 0 })
+      .fromTo(topNew, 1, { opacity: 0, x: -200 }, { opacity: 1, x: 0 }, "-=1.0")
+      .fromTo(logo, 0.5, { opacity: 0, x: -30 }, { opacity: 1, x: 0 }, "-=0.5")
+      .fromTo(sns, 0.5, { opacity: 0, x: 30 }, { opacity: 1, x: 0 }, "-=0.5");
+  </script>
+  <script src="https://at.alicdn.com/t/font_2180348_yfemwq5d2f.js
+  "></script>
+</html>
